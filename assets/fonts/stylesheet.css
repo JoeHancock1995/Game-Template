@@ -1,0 +1,180 @@
+
+@font-face {
+    font-family:"6809chargen";
+    src:url("6809CHAR.woff2") format("woff2"),url("6809CHAR.woff") format("woff"),url("6809CHAR.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"Avante Go";
+    src:url("Avante Go.woff2") format("woff2"),url("Avante Go.woff") format("woff"),url("Avante Go.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"bunker";
+    src:url("bunker.woff2") format("woff2"),url("bunker.woff") format("woff"),url("bunker.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"Europe Underground";
+    src:url("EuropeUnderground_black.woff2") format("woff2"),url("EuropeUnderground_black.woff") format("woff"),url("EuropeUnderground_black.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Europe Underground Light";
+    src:url("EuropeUnderground_light.woff2") format("woff2"),url("EuropeUnderground_light.woff") format("woff"),url("EuropeUnderground_light.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"Fancy Card Text";
+    src:url("FancyCardText.woff2") format("woff2"),url("FancyCardText.woff") format("woff"),url("FancyCardText.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Gaposis Solid (BRK)";
+    src:url("gaposiss.woff2") format("woff2"),url("gaposiss.woff") format("woff"),url("gaposiss.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Gargoyle SSi";
+    src:url("GARGOYL.woff2") format("woff2"),url("GARGOYL.woff") format("woff"),url("GARGOYL.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Gentleman Caller";
+    src:url("GentlemanCaller.woff2") format("woff2"),url("GentlemanCaller.woff") format("woff"),url("GentlemanCaller.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Ionic Charge";
+    src:url("ionic.woff2") format("woff2"),url("ionic.woff") format("woff"),url("ionic.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"MW PITHY";
+    src:url("MW_PITHY.woff2") format("woff2"),url("MW_PITHY.woff") format("woff"),url("MW_PITHY.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"NewMedia";
+    src:url("NewMedia.woff2") format("woff2"),url("NewMedia.woff") format("woff"),url("NewMedia.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"panda ROBOT";
+    src:url("panda ROBOT.woff2") format("woff2"),url("panda ROBOT.woff") format("woff"),url("panda ROBOT.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Cubo";
+    src:url("Q-bo.woff2") format("woff2"),url("Q-bo.woff") format("woff"),url("Q-bo.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"TANTOR";
+    src:url("TANTOR__.woff2") format("woff2"),url("TANTOR__.woff") format("woff"),url("TANTOR__.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"TGL 31034-2";
+    src:url("TGL 31034-2.woff2") format("woff2"),url("TGL 31034-2.woff") format("woff"),url("TGL 31034-2.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Voyager grotesque";
+    src:url("Voyager Grotesque(regular).woff2") format("woff2"),url("Voyager Grotesque(regular).woff") format("woff"),url("Voyager Grotesque(regular).otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"WinterthurCondensedOblique";
+    src:url("WinterthurCondensedOblique.woff2") format("woff2"),url("WinterthurCondensedOblique.woff") format("woff"),url("WinterthurCondensedOblique.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Ye Old Shire Outline";
+    src:url("Ye Old Shire Outline.woff2") format("woff2"),url("Ye Old Shire Outline.woff") format("woff"),url("Ye Old Shire Outline.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Ye Old Shire";
+    src:url("Ye Old Shire.woff2") format("woff2"),url("Ye Old Shire.woff") format("woff"),url("Ye Old Shire.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Year 2000 Replicant";
+    src:url("YEARR___.woff2") format("woff2"),url("YEARR___.woff") format("woff"),url("YEARR___.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Yold Anglican";
+    src:url("YOLDA___.woff2") format("woff2"),url("YOLDA___.woff") format("woff"),url("YOLDA___.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Lumio";
+    src:url("Young.woff2") format("woff2"),url("Young.woff") format("woff"),url("Young.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Zorque";
+    src:url("zorque.woff2") format("woff2"),url("zorque.woff") format("woff"),url("zorque.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Steiner Light";
+    src:url("Steinerlight.woff2") format("woff2"),url("Steinerlight.woff") format("woff"),url("Steinerlight.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"SbB Epyx Shadow Regular";
+    src:url("sbb-epyx-shadow.woff2") format("woff2"),url("sbb-epyx-shadow.woff") format("woff"),url("sbb-epyx-shadow.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"rockdafonkybitRegular";
+    src:url("rockdafonkybit.woff2") format("woff2"),url("rockdafonkybit.woff") format("woff"),url("rockdafonkybit.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+@font-face {
+    font-family:"Quad-Black";
+    src:url("Quad Black.woff2") format("woff2"),url("Quad Black.woff") format("woff"),url("Quad Black.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"Conman Regular";
+    src:url("ConmanRegular.woff2") format("woff2"),url("ConmanRegular.woff") format("woff"),url("ConmanRegular.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Warsaw Gothic";
+    src:url("WarsawGothic.woff2") format("woff2"),url("WarsawGothic.woff") format("woff"),url("WarsawGothic.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"Ticketing";
+    src:url("Ticketing.woff2") format("woff2"),url("Ticketing.woff") format("woff"),url("Ticketing.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"Crash";
+    src:url("CRASH___.woff2") format("woff2"),url("CRASH___.woff") format("woff"),url("CRASH___.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
