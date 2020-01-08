@@ -13,11 +13,13 @@
 <body onload="startGame()">
     <script>
     
-    var myGamePiece;
+    var blackGamePiece
+    //  redGamePiece;
     
     function startGame() {
         myGameArea.start();
-        myGamePiece = new component(30, 30, "black", 10, 120);
+        blackGamePiece = new component(30, 30, "black", 2, 2);
+        // redGamePiece = new component(30, 30, "red", 2, 60);
     }
     
     var myGameArea = {
@@ -37,6 +39,8 @@
     function component(width, height, color, x, y) {
         this.width = width;
         this.height = height;
+        this.speedX = 0;
+        this.speedY = 0;
         this.x = x;
         this.y = y;
         this.update = function() { 
@@ -44,12 +48,40 @@
         ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         }
+        this.newPOS = function() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+        }
     }
     
     function updateGameArea() {
         myGameArea.clear();
-        myGamePiece.update();
+        blackGamePiece.newPOS();
+        blackGamePiece.update();
+    }
+
+    function moveup() {
+        blackGamePiece.speedY -= 1;
+    }
+
+    function movedown() {
+        blackGamePiece.speedY +=1;
+    }
+
+    function moveleft() {
+        blackGamePiece.speedX -= 1;
+    }
+
+    function moveright() {
+        blackGamePiece.speedX += 1;
     }
     </script>
+
+    <div style= "text-align:center; width: 480px;">
+        <button onclick="moveup()">UP</button>
+        <button onclick="moveleft()">LEFT</button>
+        <button onclick="moveright()">RIGHT</button>
+        <button onclick="movedown()">DOWN</button>
+    </div>
 </body>
 </html>
