@@ -30,6 +30,12 @@
             this.context = this.canvas.getContext("2d");
             document.body.insertBefore(this.canvas, document.body.childNodes[0]);
             this.interval = setInterval(updateGameArea, 20);
+            window.addEventListener('keydown', function (e) {
+                myGameArea.key = e.keyCode;
+            })
+            window.addEventListener('keyup', function (e) {
+                myGameArea.key = false;
+            })
         },
         clear : function () {
             this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -56,6 +62,12 @@
     
     function updateGameArea() {
         myGameArea.clear();
+        blackGamePiece.speedX = 0;
+        blackGamePiece.speedY = 0;
+        if (myGameArea.key && myGameArea.key == 37) {blackGamePiece.speedX = -1; }
+        if (myGameArea.key && myGameArea.key == 39) {blackGamePiece.speedX = 1; }
+        if (myGameArea.key && myGameArea.key == 38) {blackGamePiece.speedY = -1; }
+        if (myGameArea.key && myGameArea.key == 40) {blackGamePiece.speedY = 1; }
         blackGamePiece.newPOS();
         blackGamePiece.update();
     }
@@ -75,13 +87,18 @@
     function moveright() {
         blackGamePiece.speedX += 1;
     }
+
+    function stopMove() {
+        blackGamePiece.speedX = 0;
+        blackGamePiece.speedY = 0;
+    }
     </script>
 
     <div style= "text-align:center; width: 480px;">
-        <button onclick="moveup()">UP</button>
-        <button onclick="moveleft()">LEFT</button>
-        <button onclick="moveright()">RIGHT</button>
-        <button onclick="movedown()">DOWN</button>
+        <button onmousedown="moveup()" onmouseup="stopMove()" ontouchstart="moveup">UP</button>
+        <button onmousedown="moveleft()"onmouseup="stopMove()" ontouchstart="moveleft">LEFT</button>
+        <button onmousedown="moveright()"onmouseup="stopMove()" ontouchstart="moveright">RIGHT</button>
+        <button onmousedown="movedown()" onmouseup="stopMove()" ontouchstart="movedown">DOWN</button>
     </div>
 </body>
 </html>
