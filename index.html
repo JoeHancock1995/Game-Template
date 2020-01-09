@@ -13,12 +13,25 @@
 <body onload="startGame()">
     <script>
     
-    var blackGamePiece
+    var blackGamePiece;
+    var wallObstacles = [];
+    var wallObstacleOne;
+    var wallObstacleTwo;
+    var wallObstacleThree;
+    var wallObstacleFour;
     //  redGamePiece;
     
     function startGame() {
         myGameArea.start();
-        blackGamePiece = new component(30, 30, "black", 2, 2);
+        blackGamePiece = new component(20, 20, "black", 315, 135);
+        wallObstacleOne = new component(10, 110, "black", 630, 0 );
+        wallObstacleTwo = new component(10, 110, "black", 630, 160 );
+        wallObstacleThree = new component (10, 110, "black", 0, 0);
+        wallObstacleFour = new component (10, 110, "black", 0, 160);
+        wallObstacleFive = new component(260, 10, "black", 0, 0 );
+        wallObstacleSix = new component(260, 10, "black", 380, 0);
+        wallObstacleSeven = new component (260, 10, "black", 0, 260);
+        wallObstacleEight = new component (260, 10, "black", 380, 260);
         // redGamePiece = new component(30, 30, "red", 2, 60);
     }
     
@@ -63,30 +76,38 @@
     
     function updateGameArea() {
         myGameArea.clear();
+        wallObstacleOne.update();
+        wallObstacleTwo.update();
+        wallObstacleThree.update();
+        wallObstacleFour.update();
+        wallObstacleFive.update();
+        wallObstacleSix.update();
+        wallObstacleSeven.update();
+        wallObstacleEight.update();
         blackGamePiece.speedX = 0;
         blackGamePiece.speedY = 0;
-        if (myGameArea.keys && myGameArea.keys[37]) {blackGamePiece.speedX = -1; }
-        if (myGameArea.keys && myGameArea.keys[39]) {blackGamePiece.speedX = 1; }
-        if (myGameArea.keys && myGameArea.keys[38]) {blackGamePiece.speedY = -1; }
-        if (myGameArea.keys && myGameArea.keys[40]) {blackGamePiece.speedY = 1; }
+        if (myGameArea.keys && myGameArea.keys[37]) {blackGamePiece.speedX = -2; }
+        if (myGameArea.keys && myGameArea.keys[39]) {blackGamePiece.speedX = 2; }
+        if (myGameArea.keys && myGameArea.keys[38]) {blackGamePiece.speedY = -2; }
+        if (myGameArea.keys && myGameArea.keys[40]) {blackGamePiece.speedY = 2; }
         blackGamePiece.newPOS();
         blackGamePiece.update();
     }
 
     function moveup() {
-        blackGamePiece.speedY -= 1;
+        blackGamePiece.speedY -= 2;
     }
 
     function movedown() {
-        blackGamePiece.speedY +=1;
+        blackGamePiece.speedY +=2;
     }
 
     function moveleft() {
-        blackGamePiece.speedX -= 1;
+        blackGamePiece.speedX -= 2;
     }
 
     function moveright() {
-        blackGamePiece.speedX += 1;
+        blackGamePiece.speedX += 2;
     }
 
     function stopMove() {
@@ -94,12 +115,5 @@
         blackGamePiece.speedY = 0;
     }
     </script>
-
-    <div style= "text-align:center; width: 480px;">
-        <button onmousedown="moveup()" onmouseup="stopMove()" ontouchstart="moveup">UP</button>
-        <button onmousedown="moveleft()"onmouseup="stopMove()" ontouchstart="moveleft">LEFT</button>
-        <button onmousedown="moveright()"onmouseup="stopMove()" ontouchstart="moveright">RIGHT</button>
-        <button onmousedown="movedown()" onmouseup="stopMove()" ontouchstart="movedown">DOWN</button>
-    </div>
 </body>
 </html>
