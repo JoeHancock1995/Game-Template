@@ -14,32 +14,27 @@
     <script>
     
     var blackGamePiece;
-    var wallObstacles = [];
-    var wallObstacleOne;
-    var wallObstacleTwo;
-    var wallObstacleThree;
-    var wallObstacleFour;
+    var wallObstacleRight;
+    var wallObstacleBottom;
+    var wallObstacleLeft;
+    var wallObstacleTop;
     //  redGamePiece;
     
     function startGame() {
         myGameArea.start();
         blackGamePiece = new component(20, 20, "black", 315, 135);
-        wallObstacleOne = new component(10, 110, "black", 630, 0 );
-        wallObstacleTwo = new component(10, 110, "black", 630, 160 );
-        wallObstacleThree = new component (10, 110, "black", 0, 0);
-        wallObstacleFour = new component (10, 110, "black", 0, 160);
-        wallObstacleFive = new component(260, 10, "black", 0, 0 );
-        wallObstacleSix = new component(260, 10, "black", 380, 0);
-        wallObstacleSeven = new component (260, 10, "black", 0, 260);
-        wallObstacleEight = new component (260, 10, "black", 380, 260);
-        // redGamePiece = new component(30, 30, "red", 2, 60);
+
+        wallObstacleRight = new component(10, 660, "black", 1405, 0 );
+        wallObstacleBottom = new component(1415, 10, "black", 0, 650 );
+        wallObstacleLeft = new component (10, 660, "black", 0, 0);
+        wallObstacleTop = new component (1415, 10, "black", 0, 0);
     }
     
     var myGameArea = {
         canvas : document.createElement("canvas"),
         start : function() {
-            this.canvas.width = 640;
-            this.canvas.height = 270;
+            this.canvas.width = 1415;
+            this.canvas.height = 660;
             this.context = this.canvas.getContext("2d");
             document.body.insertBefore(this.canvas, document.body.childNodes[0]);
             this.interval = setInterval(updateGameArea, 20);
@@ -76,38 +71,34 @@
     
     function updateGameArea() {
         myGameArea.clear();
-        wallObstacleOne.update();
-        wallObstacleTwo.update();
-        wallObstacleThree.update();
-        wallObstacleFour.update();
-        wallObstacleFive.update();
-        wallObstacleSix.update();
-        wallObstacleSeven.update();
-        wallObstacleEight.update();
+        wallObstacleRight.update();
+        wallObstacleBottom.update();
+        wallObstacleLeft.update();
+        wallObstacleTop.update();
         blackGamePiece.speedX = 0;
         blackGamePiece.speedY = 0;
-        if (myGameArea.keys && myGameArea.keys[37]) {blackGamePiece.speedX = -2; }
-        if (myGameArea.keys && myGameArea.keys[39]) {blackGamePiece.speedX = 2; }
-        if (myGameArea.keys && myGameArea.keys[38]) {blackGamePiece.speedY = -2; }
-        if (myGameArea.keys && myGameArea.keys[40]) {blackGamePiece.speedY = 2; }
+        if (myGameArea.keys && myGameArea.keys[37]) {blackGamePiece.speedX = -3; }
+        if (myGameArea.keys && myGameArea.keys[39]) {blackGamePiece.speedX = 3; }
+        if (myGameArea.keys && myGameArea.keys[38]) {blackGamePiece.speedY = -3; }
+        if (myGameArea.keys && myGameArea.keys[40]) {blackGamePiece.speedY =3; }
         blackGamePiece.newPOS();
         blackGamePiece.update();
     }
 
     function moveup() {
-        blackGamePiece.speedY -= 2;
+        blackGamePiece.speedY -= 3;
     }
 
     function movedown() {
-        blackGamePiece.speedY +=2;
+        blackGamePiece.speedY +=3;
     }
 
     function moveleft() {
-        blackGamePiece.speedX -= 2;
+        blackGamePiece.speedX -= 3;
     }
 
     function moveright() {
-        blackGamePiece.speedX += 2;
+        blackGamePiece.speedX += 3;
     }
 
     function stopMove() {
