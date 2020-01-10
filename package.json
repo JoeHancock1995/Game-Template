@@ -1,0 +1,23 @@
+{
+  "name": "Game-Template",
+  "version": "1.0.0",
+  "description": "Attempt at a generic game template using only html, css, and javascript",
+  "main": "AsciiEffect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeHancock1995/Game-Template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeHancock1995/Game-Template/issues"
+  },
+  "homepage": "https://github.com/JoeHancock1995/Game-Template#readme",
+  "dependencies": {
+    "three": "^0.112.1"
+  }
+}

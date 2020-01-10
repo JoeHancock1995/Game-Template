@@ -7,19 +7,19 @@ var blackGamePiece;
     
     function startGame() {
         myGameArea.start();
-        blackGamePiece = new component(20, 20, "black", 315, 135);
+        blackGamePiece = new component(20, 20, "white", 115, 135);
 
-        wallObstacleRight = new component(10, 660, "black", 1405, 0 );
-        wallObstacleBottom = new component(1415, 10, "black", 0, 650 );
-        wallObstacleLeft = new component (10, 660, "black", 0, 0);
-        wallObstacleTop = new component (1415, 10, "black", 0, 0);
+        wallObstacleRight = new component(10, 300, "black", 690, 0 );
+        wallObstacleBottom = new component(700, 10, "black", 0, 290 );
+        wallObstacleLeft = new component (10, 300, "black", 0, 0);
+        wallObstacleTop = new component (700, 10, "black", 0, 0);
     }
     
     var myGameArea = {
         canvas : document.createElement("canvas"),
         start : function() {
-            this.canvas.width = 1415;
-            this.canvas.height = 660;
+            this.canvas.width = 600;
+            this.canvas.height = 300;
             this.context = this.canvas.getContext("2d");
             document.body.insertBefore(this.canvas, document.body.childNodes[0]);
             this.interval = setInterval(updateGameArea, 20);
@@ -114,4 +114,5 @@ var blackGamePiece;
     function stopMove() {
         blackGamePiece.speedX = 0;
         blackGamePiece.speedY = 0;
-    }
+    };
+

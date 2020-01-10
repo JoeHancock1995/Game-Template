@@ -1,7 +1,10 @@
 *{
-    /* height:600px; */
+background-color: black
 }
-.canvas {
-    border: 1px solid white;
-    background-color: black;
+canvas {
+    border: 10px double rgb(255, 255, 255);
+    background-image: url(./images/plv24.1.jpg);
+    background-size: contain;
+    width: 700px;
+    height: 300px
 }
